@@ -20,3 +20,17 @@ https://kausheya2006.github.io
 1. I have provided the link of the website in submission.txt
 
 2. Click on ANALYZE TEXT tab for Qs 3 
+
+3. This is my pronouns, prepositions, articles wordlist : (case insensitive)
+```
+    pronouns = ['i', 'you', 'he', 'she', 'it', 'we', 'they', 'me', 'him', 'her', 'us', 'them', 'my', 'your', 'his', 'our', 'their']
+```
+```
+    prepositions = ['in', 'on', 'at', 'by', 'with', 'about', 'against', 'between', 'into', 'through', 'during', 'before', 'after', 'above', 'below', 'to', 'from', 'up', 'down', 'of', 'off', 'over', 'under']
+```
+```    
+    articles = ['a', 'an', 'the']
+```
+
+
+
