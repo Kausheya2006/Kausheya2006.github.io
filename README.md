@@ -14,3 +14,9 @@ https://kausheya2006.github.io
 ![Desktop view](assets/pc_view.png)
 ### Mobile View
 <img src="assets/mobile_view.jpeg" alt="mobile view" width="45%">
+
+## Assumptions
+
+1. I have provided the link of the website in submission.txt
+
+2. Click on ANALYZE TEXT tab for Qs 3 
