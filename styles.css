@@ -1,0 +1,258 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #1a1d29;
+    color: #00ff00;
+    font-family: 'Fira Code', monospace;
+    overflow-x: hidden;
+    cursor: default;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.terminal-window {
+    background: #1e1e1e;
+    border: 1px solid #3a3a3a;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.terminal-header {
+    background: linear-gradient(180deg, #2d2d2d 0%, #252525 100%);
+    padding: 10px 15px;
+    border-bottom: 1px solid #3a3a3a;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.terminal-button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.btn-close { background: #ff5f56; }
+.btn-minimize { background: #ffbd2e; }
+.btn-maximize { background: #27c93f; }
+
+.terminal-title {
+    margin-left: auto;
+    font-size: 12px;
+    color: #8a8a8a;
+    opacity: 0.7;
+}
+
+.terminal-body {
+    padding: 30px;
+    min-height: 200px;
+}
+
+.command-line {
+    display: flex;
+    margin-bottom: 15px;
+    align-items: flex-start;
+}
+
+.prompt {
+    color: #4af626;
+    margin-right: 10px;
+    white-space: nowrap;
+}
+
+.prompt-user { color: #4af626; }
+.prompt-host { color: #34bfa3; }
+.prompt-path { color: #5ea8f5; }
+
+.command {
+    color: #f5db5e;
+}
+
+.output {
+    color: #d4d4d4;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.section-title {
+    color: #34bfa3;
+    font-size: 18px;
+    margin-bottom: 15px;
+    font-weight: 700;
+    border-bottom: 1px dashed #3a3a3a;
+    padding-bottom: 5px;
+}
+
+.ascii-art {
+    color: #4af626;
+    font-size: 10px;
+    line-height: 1.2;
+    white-space: pre;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.typing-cursor {
+    animation: blink 1s infinite;
+    color: #4af626;
+    font-weight: bold;
+}
+
+@keyframes blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0; }
+}
+
+.item {
+    margin-bottom: 20px;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.02);
+    border-left: 3px solid #4af626;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.item:hover {
+    background: rgba(255, 255, 255, 0.04);
+    border-left-width: 5px;
+    transform: translateX(5px);
+}
+
+.item-title {
+    color: #f5db5e;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.item-subtitle {
+    color: #c586c0;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.item-description {
+    color: #d4d4d4;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.tag {
+    display: inline-block;
+    padding: 3px 8px;
+    margin: 5px 5px 5px 0;
+    background: rgba(52, 191, 163, 0.15);
+    border: 1px solid #34bfa3;
+    border-radius: 3px;
+    font-size: 12px;
+    color: #34bfa3;
+}
+
+.link {
+    color: #5ea8f5;
+    text-decoration: none;
+    border-bottom: 1px dotted #5ea8f5;
+    transition: all 0.3s ease;
+}
+
+.link:hover {
+    color: #34bfa3;
+    border-bottom: 1px solid #34bfa3;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.stat-box {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid #3a3a3a;
+    padding: 15px;
+    border-radius: 4px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.stat-box:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: #4af626;
+    transform: scale(1.05);
+}
+
+.stat-value {
+    font-size: 24px;
+    color: #4af626;
+    font-weight: 700;
+}
+
+.stat-label {
+    font-size: 12px;
+    color: #8a8a8a;
+    margin-top: 5px;
+}
+
+/* Glitch effect for header */
+.glitch {
+    position: relative;
+}
+
+/* Matrix rain background */
+.matrix-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.015;
+}
+
+@media (max-width: 768px) {
+    .terminal-body {
+        padding: 20px 15px;
+    }
+    
+    .ascii-art {
+        font-size: 8px;
+    }
+    
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1a1d29;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #3a3a3a;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #4a4a4a;
+}
