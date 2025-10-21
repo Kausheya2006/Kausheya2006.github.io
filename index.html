@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>yourname@host ~ $</title>
+    <title>Personal Website :)</title>
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -367,7 +367,7 @@
         </div>
 
         <div style="text-align: center; padding: 30px; color: #8a8a8a; opacity: 0.5; font-size: 12px;">
-            © 2025 • Build with 🗿 by Kausheya Roy • 
+            © 2025 • Build with 🗿 by Kausheya Roy <br>• 
             Last updated: <span id="lastUpdated"></span>
         </div>
     </div>
@@ -390,7 +390,7 @@
         }
 
         function drawMatrix() {
-            ctx.fillStyle = 'rgba(26, 29, 41, 0.05)';
+            ctx.fillStyle = 'rgba(26, 29, 41, 0.1)';
             ctx.fillRect(0, 0, canvas.width, canvas.height);
 
             ctx.fillStyle = '#4af626';
@@ -412,6 +412,12 @@
         window.addEventListener('resize', () => {
             canvas.width = window.innerWidth;
             canvas.height = window.innerHeight;
+
+            const newColumns = Math.floor(canvas.width / fontSize);
+            drops.length = newColumns;
+            for (let i = 0; i < newColumns; i++) {
+                drops[i] = Math.random() * -100;
+            }
         });
 
         // Update last updated date
