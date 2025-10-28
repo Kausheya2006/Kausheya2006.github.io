@@ -222,7 +222,7 @@ body {
     height: 100%;
     pointer-events: none;
     z-index: 0;
-    opacity: 0.5;
+    opacity: 0.3;
 }
 
 @media (max-width: 768px) {
