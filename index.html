@@ -5,11 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Kausheya Roy — Systems & AI Engineering</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Geist:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <script src="https://unpkg.com/lucide@latest"></script>
 <link rel="stylesheet" href="index.css">
 </head>
 <body>
+<div id="cursor-glow"></div>
+<div id="bg-spotlight"></div>
 
 <!-- NAV -->
 <nav class="nav" id="nav">
@@ -24,12 +26,22 @@
     <li><a href="#skills">Skills</a></li>
     <li><a href="#about">About</a></li>
   </ul>
-  <a href="https://github.com/Kausheya2006" class="nav-btn">GitHub</a>
+  <div style="display: flex; align-items: center; gap: 16px;">
+    <button id="theme-toggle" style="background:none; border:none; color:var(--white); cursor:pointer; display:flex; padding:0; transition: color 0.2s;" aria-label="Toggle Theme">
+      <i data-lucide="sun" id="theme-icon" aria-hidden="true" style="width: 18px; height: 18px;"></i>
+    </button>
+    <a href="https://github.com/Kausheya2006" class="nav-btn">GitHub</a>
+  </div>
 </nav>
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-bg"></div>
+  <div class="hero-bg">
+    <div class="gradient-sphere gs-1"></div>
+    <div class="gradient-sphere gs-2"></div>
+    <div class="gradient-sphere gs-3"></div>
+    <div class="gradient-sphere gs-4"></div>
+  </div>
   <div class="hero-inner">
     <div>
       <div class="hero-avail">
@@ -41,19 +53,13 @@
         Student and Undergraduate researcher at <strong>IIIT Hyderabad, </strong> and passionate in building better and more efficient systems that actually matter.
       </p>
       <div class="hero-actions">
-        <a href="mailto:kausheya.roy@research.iiit.ac.in" class="btn-filled">Get in touch <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
-        <a href="https://github.com/Kausheya2006" class="btn-ghost">Explore work <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        <a href="#about" id="btn-get-in-touch" class="btn-filled">Get in touch <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        <a href="#work" class="btn-ghost">Explore work <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
       </div>
     </div>
   </div>
   <div class="hero-bottom">
     <span class="hero-foot-l">Passionate about building, not talking about it</span>
-    <div class="hero-scroll">
-      SCROLL
-      <svg width="16" height="24" viewBox="0 0 16 24" fill="none" stroke="currentColor" stroke-width="1.5">
-        <path d="M8 2v20M3 17l5 4 5-4"/>
-      </svg>
-    </div>
   </div>
 </section>
 
@@ -82,18 +88,15 @@
 
     <article class="wcard r">
       <div class="wvis">
-        <div class="wvis-bg vis-trv" style="filter: hue-rotate(140deg);"></div> <!-- Shifted background hue for visual separation -->
-        <div class="vgfx">
-          <div class="vchip">Applied AI & Streaming</div>
-          <div class="vbig ctut"><i data-lucide="file-text" aria-hidden="true"></i></div>
-          <div class="vsub">Real-time Information Extraction</div>
-        </div>
+        <img src="assets/productlab.png" class="wimg wimg-product" alt="ProductLabs AI Form Filler">
+        
+        
       </div>
       <div class="winfo">
         <div>
           <p class="wtag"><span class="wtag-dot"></span>Team Project · Apr 2026</p>
-          <h3 class="wtitle">ProductLabs AI Form Filler<br>Information Extraction Pipeline</h3>
-          <p class="wbody">Developed a real-time extraction pipeline using FastAPI and a Qwen-2.5-1.5B model to parse and populate structured form schemas directly from live chat inputs. Engineered a multimodal media layer using Whisper ASR and PyAnnote acoustic embeddings to automate speaker diarization, keeping streaming chunk ingestion latency under 200 ms. Implemented a custom worker thread pool to manage concurrent live audio workflows, reducing peak response latency by 65%.</p>
+          <h3 class="wtitle">ProductLabs AI Form Filler</h3>
+          <p class="wbody">Developed a real-time information extraction pipeline using FastAPI and a Qwen-2.5-1.5B model to parse and populate structured form schemas directly from live chat inputs. Engineered a multimodal media layer using Whisper ASR and PyAnnote acoustic embeddings to automate speaker diarization, keeping streaming chunk ingestion latency under 200 ms. Implemented a custom worker thread pool to manage concurrent live audio workflows, reducing peak response latency by 65%.</p>
           <div class="wmetrics">
             <div class="wmet"><strong>&lt; 200 ms</strong> Chunks</div>
             <div class="wmet"><strong>65%</strong> Latency Drop</div>
@@ -106,19 +109,16 @@
       </div>
     </article>
     
-    <article class="wcard rev d1">
+    <article class="wcard r rev d1">
       <div class="wvis">
-        <div class="wvis-bg vis-trv"></div>
-        <div class="vgfx">
-          <div class="vchip">On-device LLM</div>
-          <div class="vbig ctut"><i data-lucide="bot" aria-hidden="true"></i></div>
-          <div class="vsub">Offline personalized tutor</div>
-        </div>
+        <img src="assets/aitutor.png" class="wimg wimg-tutor" alt="AI-Powered Tutor">
+        
+        
       </div>
       <div class="winfo">
         <div>
           <p class="wtag"><span class="wtag-dot"></span>Team Project · Dec 2025</p>
-          <h3 class="wtitle">AI-Powered Tutor<br>for Qualcomm Dev Kit</h3>
+          <h3 class="wtitle">AI-Powered Tutor</h3>
           <p class="wbody">Built an offline personalized AI tutoring app on the Qualcomm Innovators Dev Kit, running LLaMA-3.2-3B fully on-device via QAIRT. Optimized NPU inference to scale throughput from around 3 to 26-30 tokens/s while cutting TTFT to 25 ms. Implemented Android-side PDF parsing and prompt orchestration for quizzes, flashcards, summaries, and key-topic extraction without internet.</p>
           <div class="wmetrics">
             <div class="wmet"><strong>26-30 tok/s</strong> throughput</div>
@@ -128,18 +128,41 @@
             <span class="stag">Android (Java)</span><span class="stag">QAIRT</span><span class="stag">Genie SDK</span><span class="stag">LLaMA</span><span class="stag">Qualcomm NPU</span><span class="stag">pdfbox-android</span>
           </div>
         </div>
-        <div class="waward"><a href="https://github.com/Kausheya2006" style="color:var(--accent)">GitHub</a></div>
+        <div class="waward"><a href="https://github.com/Kausheya2006/AI_TUTOR2" style="color:var(--accent)">GitHub</a></div>
       </div>
     </article>
 
     <article class="wcard r d1">
       <div class="wvis">
-        <div class="wvis-bg vis-amb"></div>
+        <div class="wvis-bg vis-cric"></div>
         <div class="vgfx">
-          <div class="vchip">Audio & Systems</div>
-          <div class="vbig camb"><i data-lucide="music-2" aria-hidden="true"></i></div>
-          <div class="vsub">Terminal synthesizer</div>
+          <div class="vchip">Computer Vision & AI</div>
+          <div class="vbig ccric"><i data-lucide="video" aria-hidden="true"></i></div>
+          <div class="vsub">OCR & Timeline Generation</div>
         </div>
+      </div>
+      <div class="winfo">
+        <div>
+          <p class="wtag"><span class="wtag-dot"></span>Personal Project</p>
+          <h3 class="wtitle">Cricket Match<br>Timeline Generator</h3>
+          <p class="wbody">CV and OCR pipeline that parses raw cricket videos into ball-by-ball text timelines. Trained two custom ResNet18 models to track bowler action and predict exact ball-release timestamps. Paired PaddleOCR with a custom state machine to read the broadcast scoreboard at those specific frames and infer missing data. Built an interactive CLI tool with smart caching to avoid running heavy GPU inferences twice.</p>
+          <div class="wmetrics">
+            <div class="wmet"><strong>2 Custom</strong> ResNet18 Models</div>
+            <div class="wmet"><strong>PaddleOCR</strong> Integration</div>
+          </div>
+          <div class="wstack">
+            <span class="stag">PyTorch</span><span class="stag">OpenCV</span><span class="stag">PaddleOCR</span><span class="stag">Python</span>
+          </div>
+        </div>
+        <div class="waward"><a href="https://github.com/Kausheya2006/Cricket-Analytics" style="color:var(--accent)">GitHub</a></div>
+      </div>
+    </article>
+
+    <article class="wcard r rev d2">
+      <div class="wvis">
+        <img src="assets/ambient.png" class="wimg wimg-ambient" alt="AmbientSynth">
+        
+        
       </div>
       <div class="winfo">
         <div>
@@ -154,18 +177,15 @@
             <span class="stag">Python</span><span class="stag">FluidSynth</span><span class="stag">MIDI</span>
           </div>
         </div>
-        <div class="waward"><a href="https://github.com/Kausheya2006/AmbientSynth" style="color:var(--accent)">github.com/Kausheya2006/AmbientSynth</a></div>
+        <div class="waward"><a href="https://github.com/Kausheya2006/AmbientSynth" style="color:var(--accent)">Github</a></div>
       </div>
     </article>
 
-    <article class="wcard d2 rev">
+    <article class="wcard r d2">
       <div class="wvis">
-        <div class="wvis-bg vis-dfs"></div>
-        <div class="vgfx">
-          <div class="vchip">Systems Programming</div>
-          <div class="vbig cdfs"><i data-lucide="folder-tree" aria-hidden="true"></i></div>
-          <div class="vsub">Concurrent network filesystem</div>
-        </div>
+        <img src="assets/dfs.png" class="wimg wimg-dfs" alt="Distributed File System">
+        
+        
       </div>
       <div class="winfo">
         <div>
@@ -180,11 +200,11 @@
             <span class="stag">C</span><span class="stag">TCP/IP Stack</span><span class="stag">POSIX Threads</span><span class="stag">Sockets</span>
           </div>
         </div>
-        <div class="waward"><a href="https://github.com/Kausheya2006" style="color:var(--accent)">GitHub</a></div>
+        <div class="waward"><a href="https://github.com/Kausheya2006/dirty-docs" style="color:var(--accent)">GitHub</a></div>
       </div>
     </article>
 
-    <article class="wcard d2">
+    <article class="wcard r rev d2">
       <div class="wvis">
         <div class="wvis-bg vis-pkt"></div>
         <div class="vgfx">
@@ -206,7 +226,7 @@
             <span class="stag">C</span><span class="stag">libpcap</span><span class="stag">POSIX Networking</span><span class="stag">TCP/IP Stack</span><span class="stag">BPF</span>
           </div>
         </div>
-        <div class="waward"><a href="https://github.com/Kausheya2006" style="color:var(--accent)">GitHub</a></div>
+        <div class="waward"><a href="https://github.com/Kausheya2006/CLI-Shark" style="color:var(--accent)">GitHub</a></div>
       </div>
     </article>
 
@@ -299,13 +319,13 @@
     </div>
     <div class="skblk">
       <div class="skico"><i data-lucide="globe" aria-hidden="true"></i></div>
-      <div class="sktitle">Web & Backend</div>
+      <div class="sktitle">Web & App Dev</div>
       <div class="sklist">
         <span class="skrow">Python / FastAPI</span>
-        <span class="skrow">Node.js / Express</span>
+        <span class="skrow">Java / Android Dev</span>
         <span class="skrow">React.js / Next.js</span>
-        <span class="skrow">MongoDB / MySQL</span>
-        <span class="skrow">Firebase</span>
+        <span class="skrow">Node.js / Express</span>
+        <span class="skrow">MongoDB / SQL</span>
       </div>
     </div>
     <div class="skblk">
@@ -315,8 +335,8 @@
         <span class="skrow">Git / Bash / Linux</span>
         <span class="skrow">Docker</span>
         <span class="skrow">Google Cloud (GCP)</span>
-        <span class="skrow">Android Development</span>
         <span class="skrow">CI/CD Pipelines</span>
+        <span class="skrow">Postman / Playwright</span>
       </div>
     </div>
   </div>
@@ -334,7 +354,7 @@
           <span class="edu-years">2024 – 2028</span>
         </div>
         <div class="edu-degree">B.Tech in Computer Science & Engineering</div>
-        <div class="edu-board">Current CGPA: 8.88 · Undergraduate Researcher at CVIT Lab</div>
+        <div class="edu-board">Current CGPA: 8.86 · Undergraduate Researcher at CVIT Lab</div>
       </article>
     </div>
     <div class="edu-item r d1">
@@ -357,14 +377,14 @@
   <div class="abgrid">
     <div class="r">
       <p class="abhl">
-        I'm a <strong>second-year CSE student at IIIT Hyderabad</strong> and an <strong>undergraduate researcher in the CVIT Lab</strong>. Born in Cooch Behar, West Bengal, I was always interested in technology as well as Music and Sketching.
+        I'm a <strong>third-year CSE student at IIIT Hyderabad</strong> and an <strong>undergraduate researcher in the CVIT Lab</strong>. Born in Cooch Behar, West Bengal, I was always interested in technology as well as Music.
         <br><br>
         My interests revolve around making <em>intelligent and efficient systems</em>.  I'm equally passionate about music—been playing MIDI keyboards and experimenting with sound synthesis. I also love to sketch and paint in my free time.
         <br><br>
        
       </p>
     </div>
-    <div class="r d1">
+    <div class="r d1" id="contact-card">
       <div class="inrow"><span class="inlbl">Email</span><span class="inval"><a href="mailto:royrimo2006@gmail.com">royrimo2006@gmail.com</a></span></div>
       <div class="inrow"><span class="inlbl">GitHub</span><span class="inval"><a href="https://github.com/Kausheya2006" style="color:var(--accent)">github.com/Kausheya2006</a></span></div>
       <div class="inrow"><span class="inlbl">Location</span><span class="inval">Hyderabad, India</span></div>
@@ -379,16 +399,25 @@
     <div class="cta-inner">
       <h2 class="cta-h r">Let's build<br><em>something together.</em></h2>
       <div class="cta-r r d1">
-        <a href="mailto:royrimo2006@gmail.com" class="btn-filled">Start a conversation <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        <form class="contact-form" id="contact-form">
+          <input type="text" id="contact-message" placeholder="Start a conversation..." required class="contact-input">
+          <button type="submit" class="contact-submit" aria-label="Send Message">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </button>
+        </form>
         <div class="cta-links">
           <a href="https://github.com/Kausheya2006" class="cta-lnk">GitHub ↗</a>
-          <a href="https://linkedin.com/in/kausheya-roy" class="cta-lnk">LinkedIn ↗</a>
+          <a href="https://linkedin.com/in/kausheya-roy-688618310/" class="cta-lnk">LinkedIn ↗</a>
         </div>
       </div>
     </div>
     <div class="footbar"><span>© 2026 Kausheya Roy</span></div>
   </div>
 </footer>
+
+<div id="dynamic-scroll" class="dynamic-scroll">
+  <span id="ds-icon-container"><i data-lucide="arrow-down" style="width: 24px; height: 24px;"></i></span>
+</div>
 
 <script src="index.js"></script>
 </body>
