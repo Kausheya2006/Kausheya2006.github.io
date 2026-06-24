@@ -1,424 +1,364 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kausheya Roy — Systems & AI Engineering</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<script src="https://unpkg.com/lucide@latest"></script>
-<link rel="stylesheet" href="index.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kausheya Roy — Personal Website</title>
+  <link rel="stylesheet" href="index.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
-<div id="cursor-glow"></div>
-<div id="bg-spotlight"></div>
 
-<!-- NAV -->
-<nav class="nav" id="nav">
-  <div class="nav-logo">
-    <span style="color:var(--accent);font-weight:700">kr</span>
-    <span class="nav-dot"></span>
-  </div>
-  <ul class="nav-links">
-    <li><a href="#work">Work</a></li>
-    <li><a href="#blogs">Blogs</a></li>
-    <li><a href="#achievements">Achievements</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#about">About</a></li>
-  </ul>
-  <div style="display: flex; align-items: center; gap: 16px;">
-    <button id="theme-toggle" style="background:none; border:none; color:var(--white); cursor:pointer; display:flex; padding:0; transition: color 0.2s;" aria-label="Toggle Theme">
-      <i data-lucide="sun" id="theme-icon" aria-hidden="true" style="width: 18px; height: 18px;"></i>
-    </button>
-    <a href="https://github.com/Kausheya2006" class="nav-btn">GitHub</a>
-  </div>
-</nav>
+  <nav class="nav-fixed">
+    <div>K. Roy</div>
+    <div class="nav-links">
+      <a href="#work">Projects</a>
+      <a href="#blogs">Blogs</a>
+      <a href="#education">Education</a>
+      <a href="#skills">Skills</a>
+      <a href="#beyond-code">Beyond Code</a>
+      <a href="#achievements">Achievements</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-bg">
-    <div class="gradient-sphere gs-1"></div>
-    <div class="gradient-sphere gs-2"></div>
-    <div class="gradient-sphere gs-3"></div>
-    <div class="gradient-sphere gs-4"></div>
-  </div>
-  <div class="hero-inner">
-    <div>
-      <div class="hero-avail">
-        <span class="hero-avail-dot"></span>
-        <span>Available for projects</span>
+  <!-- HERO -->
+  <section class="duel-section hero-standoff">
+    <div class="side-a" style="padding: 0;">
+      <div class="slide-in-left" style="mix-blend-mode: difference; z-index: 10; padding: 0 8vw 0 8vw;">
+        <h1>Kausheya<br>Roy</h1>
       </div>
-      <h1 class="hero-name">Kausheya Roy<br><span class="hero-name-sub">CS Engineer</span></h1>
-      <p class="hero-desc">
-        Student and Undergraduate researcher at <strong>IIIT Hyderabad, </strong> and passionate in building better and more efficient systems that actually matter.
-      </p>
-      <div class="hero-actions">
-        <a href="#about" id="btn-get-in-touch" class="btn-filled">Get in touch <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
-        <a href="#work" class="btn-ghost">Explore work <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      <div class="slide-in-left" style="padding: 0 8vw 8vw 8vw;">
+        <p style="color: var(--text-light);">My Personal Page</p>
       </div>
     </div>
-  </div>
-  <div class="hero-bottom">
-    <span class="hero-foot-l">Passionate about building, not talking about it</span>
-  </div>
-</section>
+    <div class="side-b slide-in-right">
+      <h2>Student <br>& CS<br>Engineer</h2>
+      <p>and Undergraduate researcher at IIIT Hyderabad, passionate about building better and more efficient systems that actually matter.</p>
+    </div>
+  </section>
 
-<!-- TICKER -->
-<div class="ticker">
-  <div class="ticker-track">
-    <div class="ticker-item">Computer Vision<span class="tsep"></span></div>
-    <div class="ticker-item">Linux<span class="tsep"></span></div>
-    <div class="ticker-item">MIDI Synthesis<span class="tsep"></span></div>
-    <div class="ticker-item">Natural Language Processing<span class="tsep"></span></div>
-    <div class="ticker-item">Web Development<span class="tsep"></span></div>
-    <div class="ticker-item">Distributed Systems<span class="tsep"></span></div>
-    <div class="ticker-item">Operating Systems<span class="tsep"></span></div>
-    <div class="ticker-item">Networking<span class="tsep"></span></div>
-    <div class="ticker-item">PyTorch<span class="tsep"></span></div>
-    <div class="ticker-item">C/C++<span class="tsep"></span></div>
-    <div class="ticker-item">AI Automation<span class="tsep"></span></div>
-    <div class="ticker-item">Low-Level Programming<span class="tsep"></span></div>
-  </div>
-</div>
+  <div class="duel-section" style="min-height: auto;"><div class="section-spacer"></div></div>
 
-<!-- WORK -->
-<section class="sec" id="work">
-  <div class="sec-head r"><span class="sec-eye">Projects & Work</span></div>
-  <div class="wlist">
+  <!-- PROJECTS -->
+  <section id="work" class="staggered-section">
+    <div class="section-heading-wrapper slide-in-left" style="padding-bottom: 0;">
+      <h2 class="section-heading">My Projects</h2>
+    </div>
 
-    <article class="wcard r">
-      <div class="wvis">
-        <img src="assets/productlab.png" class="wimg wimg-product" alt="ProductLabs AI Form Filler">
-        
-        
+    <!-- Project 1: ProductLabs -->
+    <div class="side-a slide-in-left stagger-item">
+      <div class="numeric-indicator">01</div>
+      <img src="assets/productlabs.png" alt="ProductLabs AI Form Filler" class="project-img">
+    </div>
+    <div class="side-b slide-in-right stagger-item offset-right">
+      <h3 class="desc-title">ProductLabs AI Form Filler</h3>
+      <p class="desc-body">Developed a real-time information extraction pipeline using FastAPI and a Qwen-2.5-1.5B model to parse and populate structured form schemas directly from live chat inputs. Engineered a multimodal media layer using Whisper ASR and PyAnnote acoustic embeddings to automate speaker diarization, keeping streaming chunk ingestion latency under 200 ms. Implemented a custom worker thread pool to manage concurrent live audio workflows, reducing peak response latency by 65%.</p>
+      <div class="desc-metrics">
+        <span><strong style="color:var(--accent);">< 200 ms</strong> Chunks</span>
+        <span><strong style="color:var(--accent);">65%</strong> Latency Drop</span>
       </div>
-      <div class="winfo">
-        <div>
-          <p class="wtag"><span class="wtag-dot"></span>Team Project · Apr 2026</p>
-          <h3 class="wtitle">ProductLabs AI Form Filler</h3>
-          <p class="wbody">Developed a real-time information extraction pipeline using FastAPI and a Qwen-2.5-1.5B model to parse and populate structured form schemas directly from live chat inputs. Engineered a multimodal media layer using Whisper ASR and PyAnnote acoustic embeddings to automate speaker diarization, keeping streaming chunk ingestion latency under 200 ms. Implemented a custom worker thread pool to manage concurrent live audio workflows, reducing peak response latency by 65%.</p>
-          <div class="wmetrics">
-            <div class="wmet"><strong>&lt; 200 ms</strong> Chunks</div>
-            <div class="wmet"><strong>65%</strong> Latency Drop</div>
-          </div>
-          <div class="wstack">
-            <span class="stag">FastAPI</span><span class="stag">MongoDB</span><span class="stag">Python</span><span class="stag">Qwen-2.5</span><span class="stag">Playwright</span><span class="stag">PyAnnote</span><span class="stag">Whisper ASR</span>
-          </div>
+      <div class="desc-stack">
+        <span>FastAPI</span><span>MongoDB</span><span>Python</span><span>Qwen-2.5</span><span>Playwright</span><span>PyAnnote</span><span>Whisper ASR</span>
+      </div>
+      <a href="https://github.com/Kausheya2006/product-based-form-filler" class="desc-link">View on GitHub ↗</a>
+    </div>
+
+    <!-- Project 2: AI Tutor -->
+    <div class="side-a slide-in-left stagger-item offset-left">
+      <h3 class="desc-title" style="text-align: right;">AI-Powered Tutor</h3>
+      <p class="desc-body" style="text-align: right;">Built an offline personalized AI tutoring app on the Qualcomm Innovators Dev Kit, running LLaMA-3.2-3B fully on-device via QAIRT. Optimized NPU inference to scale throughput from around 3 to 26-30 tokens/s while cutting TTFT to 25 ms. Implemented Android-side PDF parsing and prompt orchestration for quizzes, flashcards, summaries, and key-topic extraction without internet.</p>
+      <div class="desc-metrics" style="justify-content: flex-end;">
+        <span><strong style="color:var(--accent);">26-30 tok/s</strong> throughput</span>
+        <span><strong style="color:var(--accent);">25 ms</strong> TTFT</span>
+      </div>
+      <div class="desc-stack" style="justify-content: flex-end;">
+        <span>Android (Java)</span><span>QAIRT</span><span>Genie SDK</span><span>LLaMA</span><span>Qualcomm NPU</span><span>pdfbox-android</span>
+      </div>
+      <div style="text-align: right;"><a href="https://github.com/Kausheya2006/AI_TUTOR2" class="desc-link">View on GitHub ↗</a></div>
+    </div>
+    <div class="side-b slide-in-right stagger-item">
+      <div class="numeric-indicator" style="text-align: right;">02</div>
+      <img src="assets/aitutor.png" alt="AI-Powered Tutor" class="project-img">
+    </div>
+
+    <!-- Project 3: DFS -->
+    <div class="side-a slide-in-left stagger-item">
+      <div class="numeric-indicator">03</div>
+      <img src="assets/dfs.png" alt="Distributed File System" class="project-img">
+    </div>
+    <div class="side-b slide-in-right stagger-item offset-right">
+      <h3 class="desc-title">Distributed File System</h3>
+      <p class="desc-body">Developed a network file system in C with a central naming server and multiple storage servers supporting concurrent TCP clients. Replaced linear filename search with a Trie-based index to achieve O(L) lookups and improve resolution speed by 3-4x. Added sentence-level locks, replication, checkpoints, access control, and caching for reliability and scale.</p>
+      <div class="desc-metrics">
+        <span><strong style="color:var(--accent);">O(L)</strong> filename lookup</span>
+        <span><strong style="color:var(--accent);">3-4x</strong> faster resolution</span>
+      </div>
+      <div class="desc-stack">
+        <span>C</span><span>TCP/IP Stack</span><span>POSIX Threads</span><span>Sockets</span>
+      </div>
+      <a href="https://github.com/Kausheya2006/dirty-docs" class="desc-link">View on GitHub ↗</a>
+    </div>
+
+    <!-- Project 4: Cricket Timeline -->
+    <div class="side-a slide-in-left stagger-item offset-left">
+      <h3 class="desc-title" style="text-align: right;">Cricket Match<br>Timeline Generator</h3>
+      <p class="desc-body" style="text-align: right;">CV and OCR pipeline that parses raw cricket videos into ball-by-ball text timelines. Trained two custom ResNet18 models to track bowler action and predict exact ball-release timestamps. Paired PaddleOCR with a custom state machine to read the broadcast scoreboard at those specific frames and infer missing data. Built an interactive CLI tool with smart caching to avoid running heavy GPU inferences twice.</p>
+      <div class="desc-metrics" style="justify-content: flex-end;">
+        <span><strong style="color:var(--accent);">2 Custom</strong> ResNet18 Models</span>
+        <span><strong style="color:var(--accent);">PaddleOCR</strong> Integration</span>
+      </div>
+      <div class="desc-stack" style="justify-content: flex-end;">
+        <span>PyTorch</span><span>OpenCV</span><span>PaddleOCR</span><span>Python</span>
+      </div>
+      <div style="text-align: right;"><a href="https://github.com/Kausheya2006/Cricket-Analytics" class="desc-link">View on GitHub ↗</a></div>
+    </div>
+    <div class="side-b slide-in-right stagger-item">
+      <div class="numeric-indicator" style="text-align: right;">04</div>
+      <img src="assets/cricket.png" alt="Cricket Analytics" class="project-img">
+    </div>
+
+    <!-- Project 5: AmbientSynth -->
+    <div class="side-a slide-in-left stagger-item">
+      <div class="numeric-indicator">05</div>
+      <img src="assets/ambient.png" alt="AmbientSynth" class="project-img">
+    </div>
+    <div class="side-b slide-in-right stagger-item offset-right">
+      <h3 class="desc-title">AmbientSynth —<br>MIDI Piano Synth</h3>
+      <p class="desc-body">Lightweight terminal-based piano synthesizer for MIDI keyboards. Dynamic audio backend selection across macOS, Linux, and Windows. Live controls for sustain, reverb, chorus, and expression. Built with FluidSynth and mido for seamless hardware integration.</p>
+      <div class="desc-metrics">
+        <span><strong style="color:var(--accent);">Cross-platform</strong> support</span>
+        <span><strong style="color:var(--accent);">MIDI</strong> & preset system</span>
+      </div>
+      <div class="desc-stack">
+        <span>Python</span><span>FluidSynth</span><span>MIDI</span>
+      </div>
+      <a href="https://github.com/Kausheya2006/AmbientSynth" class="desc-link">View on GitHub ↗</a>
+    </div>
+
+    <!-- Project 6: CLI-Shark -->
+    <div class="side-a slide-in-left stagger-item offset-left">
+      <h3 class="desc-title" style="text-align: right;">CLI-Shark</h3>
+      <p class="desc-body" style="text-align: right;">Built a packet sniffer in C with libpcap to capture and analyze live traffic directly from network interfaces. Integrated kernel-level BPF filtering to reduce CPU load by around 60 percent. Designed a CLI that parses Ethernet, IP, and TCP/UDP headers and streams packet summaries in real time for debugging workflows.</p>
+      <div class="desc-metrics" style="justify-content: flex-end;">
+        <span><strong style="color:var(--accent);">~60%</strong> lower CPU load</span>
+        <span><strong style="color:var(--accent);">Real-time</strong> header parsing</span>
+      </div>
+      <div class="desc-stack" style="justify-content: flex-end;">
+        <span>C</span><span>libpcap</span><span>POSIX Networking</span><span>TCP/IP Stack</span><span>BPF</span>
+      </div>
+      <div style="text-align: right;"><a href="https://github.com/Kausheya2006/CLI-Shark" class="desc-link">View on GitHub ↗</a></div>
+    </div>
+    <div class="side-b slide-in-right stagger-item">
+      <div class="numeric-indicator" style="text-align: right;">06</div>
+      <img src="assets/clishark.png" alt="CLI-Shark" class="project-img">
+    </div>
+  </section>
+
+  <div class="duel-section" style="min-height: auto;"><div class="section-spacer"></div></div>
+
+  <!-- BLOGS -->
+  <section id="blogs" class="staggered-section">
+    <div class="section-heading-wrapper slide-in-left">
+      <h2 class="section-heading">Technical Writing</h2>
+    </div>
+
+    <!-- Featured Article -->
+    <div class="side-a slide-in-left stagger-item" style="display: flex; align-items: center; justify-content: flex-start;">
+      <h3 class="desc-title">Featured<br>Article</h3>
+    </div>
+    <div class="side-b slide-in-right stagger-item offset-right">
+      <h3 class="desc-title" style="font-size: clamp(24px, 3vw, 36px); margin-bottom: 8px;">Understanding and Implementing Transformers from Scratch</h3>
+      <p class="desc-body">Deep dive into how Transformer models work, with intuitive explanations and a complete PyTorch implementation. Build a French-to-English translator while learning about attention mechanisms, positional encoding, and the architecture that powers modern LLMs.</p>
+      <a href="https://medium.com/magic-ai/understanding-and-implementing-transformers-from-scratch-3da5ddc0cdd6" class="desc-link">Read Article (17 min read) ↗</a>
+    </div>
+  </section>
+
+  <div class="duel-section" style="min-height: auto;"><div class="section-spacer"></div></div>
+
+  <!-- THE CHOICE MOMENT (WHO AM I) -->
+  <section class="choice-moment slide-in-right">
+    <div class="choice-noise"></div>
+    <h2 style="font-size: clamp(32px, 5vw, 64px); text-transform: none; font-style: italic;">Driven by logic. Shaped by sound.</h2>
+    <p style="max-width: 800px; margin: 0 auto; line-height: 1.8;">Born in Cooch Behar, West Bengal, my journey into technology is fueled by a desire to build systems that create meaningful, positive impact. Beyond coding, I am also deeply passionate about music, spending my time playing the MIDI keyboard and experimenting with sound synthesis.</p>
+  </section>
+  <div class="duel-section" style="min-height: auto;"><div class="section-spacer"></div></div>
+
+  <!-- EDUCATION -->
+  <section id="education" class="timeline-section" style="padding-top: 120px;">
+    <div class="section-heading-wrapper slide-in-left" style="position: relative; z-index: 10; margin-bottom: 240px; text-align: center;">
+      <h2 class="section-heading" style="margin: 0 auto; display: inline-block;">Education</h2>
+    </div>
+
+    <div style="position: relative;">
+      <div class="timeline-spine" style="top: 0; bottom: 0;"></div>
+
+    <!-- Node 1: Left Side -->
+    <div class="timeline-node timeline-node-left slide-in-left">
+      <div class="timeline-content">
+        <div class="timeline-date">2024 – 2028</div>
+        <h3 class="desc-title" style="margin-bottom: 16px;">B.Tech in Computer Science & Engineering</h3>
+        <p class="desc-body" style="font-size: 24px;">International Institute of Information Technology, Hyderabad</p>
+        <div class="desc-stack" style="justify-content: flex-end;">
+          <span>Current CGPA: 8.86</span>
         </div>
-        <div class="waward"><a href="https://github.com/Kausheya2006/product-based-form-filler" style="color:var(--accent)">GitHub</a></div>
       </div>
-    </article>
+    </div>
+
+    <!-- Node 2: Right Side -->
+    <div class="timeline-node timeline-node-right slide-in-right" style="margin-bottom: 120px;">
+      <div class="timeline-content">
+        <div class="timeline-date">2014 – 2024</div>
+        <h3 class="desc-title" style="margin-bottom: 16px;">CBSE Board · Science Stream</h3>
+        <p class="desc-body" style="font-size: 24px;">Techno India Group Public School, Cooch Behar</p>
+        <div class="desc-stack" style="justify-content: flex-start;">
+          <span>Class 10: 97%</span><span>Class 12: 96.4%</span>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <div class="duel-section" style="min-height: auto;"><div class="section-spacer"></div></div>
+
+  <!-- SKILLS -->
+  <section id="skills" class="staggered-section">
+    <div class="section-heading-wrapper slide-in-left">
+      <h2 class="section-heading">Skills</h2>
+    </div>
     
-    <article class="wcard r rev d1">
-      <div class="wvis">
-        <img src="assets/aitutor.png" class="wimg wimg-tutor" alt="AI-Powered Tutor">
-        
-        
-      </div>
-      <div class="winfo">
-        <div>
-          <p class="wtag"><span class="wtag-dot"></span>Team Project · Dec 2025</p>
-          <h3 class="wtitle">AI-Powered Tutor</h3>
-          <p class="wbody">Built an offline personalized AI tutoring app on the Qualcomm Innovators Dev Kit, running LLaMA-3.2-3B fully on-device via QAIRT. Optimized NPU inference to scale throughput from around 3 to 26-30 tokens/s while cutting TTFT to 25 ms. Implemented Android-side PDF parsing and prompt orchestration for quizzes, flashcards, summaries, and key-topic extraction without internet.</p>
-          <div class="wmetrics">
-            <div class="wmet"><strong>26-30 tok/s</strong> throughput</div>
-            <div class="wmet"><strong>25 ms</strong> TTFT</div>
-          </div>
-          <div class="wstack">
-            <span class="stag">Android (Java)</span><span class="stag">QAIRT</span><span class="stag">Genie SDK</span><span class="stag">LLaMA</span><span class="stag">Qualcomm NPU</span><span class="stag">pdfbox-android</span>
-          </div>
-        </div>
-        <div class="waward"><a href="https://github.com/Kausheya2006/AI_TUTOR2" style="color:var(--accent)">GitHub</a></div>
-      </div>
-    </article>
-
-    <article class="wcard r d1">
-      <div class="wvis">
-        <div class="wvis-bg vis-cric"></div>
-        <div class="vgfx">
-          <div class="vchip">Computer Vision & AI</div>
-          <div class="vbig ccric"><i data-lucide="video" aria-hidden="true"></i></div>
-          <div class="vsub">OCR & Timeline Generation</div>
-        </div>
-      </div>
-      <div class="winfo">
-        <div>
-          <p class="wtag"><span class="wtag-dot"></span>Personal Project</p>
-          <h3 class="wtitle">Cricket Match<br>Timeline Generator</h3>
-          <p class="wbody">CV and OCR pipeline that parses raw cricket videos into ball-by-ball text timelines. Trained two custom ResNet18 models to track bowler action and predict exact ball-release timestamps. Paired PaddleOCR with a custom state machine to read the broadcast scoreboard at those specific frames and infer missing data. Built an interactive CLI tool with smart caching to avoid running heavy GPU inferences twice.</p>
-          <div class="wmetrics">
-            <div class="wmet"><strong>2 Custom</strong> ResNet18 Models</div>
-            <div class="wmet"><strong>PaddleOCR</strong> Integration</div>
-          </div>
-          <div class="wstack">
-            <span class="stag">PyTorch</span><span class="stag">OpenCV</span><span class="stag">PaddleOCR</span><span class="stag">Python</span>
-          </div>
-        </div>
-        <div class="waward"><a href="https://github.com/Kausheya2006/Cricket-Analytics" style="color:var(--accent)">GitHub</a></div>
-      </div>
-    </article>
-
-    <article class="wcard r rev d2">
-      <div class="wvis">
-        <img src="assets/ambient.png" class="wimg wimg-ambient" alt="AmbientSynth">
-        
-        
-      </div>
-      <div class="winfo">
-        <div>
-          <p class="wtag"><span class="wtag-dot"></span>Personal Project · Python</p>
-          <h3 class="wtitle">AmbientSynth —<br>MIDI Piano Synth</h3>
-          <p class="wbody">Lightweight terminal-based piano synthesizer for MIDI keyboards. Dynamic audio backend selection across macOS, Linux, and Windows. Live controls for sustain, reverb, chorus, and expression. Built with FluidSynth and mido for seamless hardware integration.</p>
-          <div class="wmetrics">
-            <div class="wmet"><strong>Cross-platform</strong> support</div>
-            <div class="wmet"><strong>MIDI</strong> & preset system</div>
-          </div>
-          <div class="wstack">
-            <span class="stag">Python</span><span class="stag">FluidSynth</span><span class="stag">MIDI</span>
-          </div>
-        </div>
-        <div class="waward"><a href="https://github.com/Kausheya2006/AmbientSynth" style="color:var(--accent)">Github</a></div>
-      </div>
-    </article>
-
-    <article class="wcard r d2">
-      <div class="wvis">
-        <img src="assets/dfs.png" class="wimg wimg-dfs" alt="Distributed File System">
-        
-        
-      </div>
-      <div class="winfo">
-        <div>
-          <p class="wtag"><span class="wtag-dot"></span>Systems Project · Nov 2025</p>
-          <h3 class="wtitle">Distributed File System</h3>
-          <p class="wbody">Developed a network file system in C with a central naming server and multiple storage servers supporting concurrent TCP clients. Replaced linear filename search with a Trie-based index to achieve O(L) lookups and improve resolution speed by 3-4x. Added sentence-level locks, replication, checkpoints, access control, and caching for reliability and scale.</p>
-          <div class="wmetrics">
-            <div class="wmet"><strong>O(L)</strong> filename lookup</div>
-            <div class="wmet"><strong>3-4x</strong> faster resolution</div>
-          </div>
-          <div class="wstack">
-            <span class="stag">C</span><span class="stag">TCP/IP Stack</span><span class="stag">POSIX Threads</span><span class="stag">Sockets</span>
-          </div>
-        </div>
-        <div class="waward"><a href="https://github.com/Kausheya2006/dirty-docs" style="color:var(--accent)">GitHub</a></div>
-      </div>
-    </article>
-
-    <article class="wcard r rev d2">
-      <div class="wvis">
-        <div class="wvis-bg vis-pkt"></div>
-        <div class="vgfx">
-          <div class="vchip">Networking & Security</div>
-          <div class="vbig cpkt"><i data-lucide="radar" aria-hidden="true"></i></div>
-          <div class="vsub">Live packet analysis</div>
-        </div>
-      </div>
-      <div class="winfo">
-        <div>
-          <p class="wtag"><span class="wtag-dot"></span>Systems Project · Oct 2025</p>
-          <h3 class="wtitle">CLI-Shark</h3>
-          <p class="wbody">Built a packet sniffer in C with libpcap to capture and analyze live traffic directly from network interfaces. Integrated kernel-level BPF filtering to reduce CPU load by around 60 percent. Designed a CLI that parses Ethernet, IP, and TCP/UDP headers and streams packet summaries in real time for debugging workflows.</p>
-          <div class="wmetrics">
-            <div class="wmet"><strong>~60%</strong> lower CPU load</div>
-            <div class="wmet"><strong>Real-time</strong> header parsing</div>
-          </div>
-          <div class="wstack">
-            <span class="stag">C</span><span class="stag">libpcap</span><span class="stag">POSIX Networking</span><span class="stag">TCP/IP Stack</span><span class="stag">BPF</span>
-          </div>
-        </div>
-        <div class="waward"><a href="https://github.com/Kausheya2006/CLI-Shark" style="color:var(--accent)">GitHub</a></div>
-      </div>
-    </article>
-
-  </div>
-</section>
-
-<!-- BLOGS -->
-<section class="sec" id="blogs">
-  <div class="sec-head r"><span class="sec-eye">Technical Writing</span></div>
-  <div class="blog-list">
-    <article class="blog-card r">
-      <div class="blog-date">Jul 20, 2025</div>
-      <h3 class="blog-title"><a href="https://medium.com/magic-ai/understanding-and-implementing-transformers-from-scratch-3da5ddc0cdd6" target="_blank" rel="noopener noreferrer">Understanding and Implementing Transformers from Scratch</a></h3>
-      <p class="blog-desc">Deep dive into how Transformer models work, with intuitive explanations and a complete PyTorch implementation. Build a French-to-English translator while learning about attention mechanisms, positional encoding, and the architecture that powers modern LLMs.</p>
-      <div class="blog-meta">17 min read</div>
-    </article>
-  </div>
-</section>
-
-
-<!-- ACHIEVEMENTS -->
-<section class="sec" id="achievements">
-  <div class="sec-head r"><span class="sec-eye">Achievements</span></div>
-  <div class="ach-grid">
-    <article class="ach-card r">
-      <div class="ach-head"><i data-lucide="trophy" aria-hidden="true"></i><span class="ach-title">Hackathons & Recognition</span></div>
-      <ul class="ach-list">
-        <li>Selected among <strong>top 6 of 24 teams</strong> and invited to Qualcomm office to exhibit the AI-Powered Tutor project.</li>
-        <li><strong>Finalist</strong>, Felicity Hackathon 2025, IIIT Hyderabad (Virtual Labs).</li>
-        <li><strong>Third Place</strong> in DataBlitz Opencode 2025 Hackathon, organized by IIIT Allahabad.</li>
+    <!-- Systems -->
+    <div class="side-a slide-in-left stagger-item" style="display: flex; align-items: center;">
+      <h3 class="desc-title">Systems &<br>Low-Level</h3>
+    </div>
+    <div class="side-b slide-in-right stagger-item offset-right">
+      <ul class="ach-list" style="list-style: none; padding: 0;">
+        <li>C / C++</li>
+        <li>x86 Assembly</li>
+        <li>POSIX Threads</li>
+        <li>TCP/IP Stack</li>
+        <li>BPF / libpcap</li>
       </ul>
-    </article>
-    <article class="ach-card r d1">
-      <div class="ach-head"><i data-lucide="bar-chart-3" aria-hidden="true"></i><span class="ach-title">Scores & Competitive Stats</span></div>
-      <ul class="ach-list">
-        <li><strong>Codeforces:</strong> Max rating 1451 (Specialist).</li>
-        <li><strong>JEE Main 2024:</strong> AIR 902 (99.97 percentile) among 1,415,110 candidates (Open).</li>
-        <li><strong>JEE Advanced 2024:</strong> AIR 2303 among 186,584 candidates (Open).</li>
-        <li><strong>WBJEE 2024:</strong> AIR 23 among 142,694 candidates (Open).</li>
-        <li><strong>ISI Admission Test:</strong> AIR 63 among around 50,000 candidates.</li>
+    </div>
+
+    <!-- AI & ML -->
+    <div class="side-a slide-in-left stagger-item offset-left">
+      <ul class="ach-list ach-list-right" style="list-style: none; padding: 0; text-align: right;">
+        <li>PyTorch / Keras</li>
+        <li>Diffusion / Generative Models</li>
+        <li>OpenCV</li>
+        <li>Transformers</li>
+        <li>Scikit-learn</li>
       </ul>
-    </article>
-  </div>
-</section>
+    </div>
+    <div class="side-b slide-in-right stagger-item" style="display: flex; align-items: center;">
+      <h3 class="desc-title">AI & Machine<br>Learning</h3>
+    </div>
 
-<!-- INTERESTS -->
-<section class="sec">
-  <div class="sec-head r"><span class="sec-eye">Beyond Code</span></div>
-  <div class="interest-grid">
-    <div class="interest-item r">
-      <span class="interest-icon"><i data-lucide="piano" aria-hidden="true"></i></span>
-      <div class="interest-name">Playing MIDI</div>
+    <!-- Web & App -->
+    <div class="side-a slide-in-left stagger-item" style="display: flex; align-items: center;">
+      <h3 class="desc-title">Web &<br>App Dev</h3>
     </div>
-    <div class="interest-item r d1">
-      <span class="interest-icon"><i data-lucide="palette" aria-hidden="true"></i></span>
-      <div class="interest-name">Painting & Sketching</div>
+    <div class="side-b slide-in-right stagger-item offset-right">
+      <ul class="ach-list" style="list-style: none; padding: 0;">
+        <li>Python / FastAPI</li>
+        <li>Java / Android Dev</li>
+        <li>React.js / Next.js</li>
+        <li>Node.js / Express</li>
+        <li>MongoDB / SQL</li>
+      </ul>
     </div>
-    <div class="interest-item r d2">
-      <span class="interest-icon"><i data-lucide="gamepad-2" aria-hidden="true"></i></span>
-      <div class="interest-name">Gaming</div>
-    </div>
-  </div>
-</section>
+  </section>
 
-<!-- SKILLS -->
-<section class="sec" id="skills">
-  <div class="sec-head r"><span class="sec-eye">Technical Expertise</span></div>
-  <div class="skgrid r d1">
-    <div class="skblk">
-      <div class="skico"><i data-lucide="cpu" aria-hidden="true"></i></div>
-      <div class="sktitle">Systems & Low-Level</div>
-      <div class="sklist">
-        <span class="skrow">C / C++</span>
-        <span class="skrow">x86 Assembly</span>
-        <span class="skrow">POSIX Threads</span>
-        <span class="skrow">TCP/IP Stack</span>
-        <span class="skrow">BPF / libpcap</span>
-      </div>
-    </div>
-    <div class="skblk">
-      <div class="skico"><i data-lucide="brain-circuit" aria-hidden="true"></i></div>
-      <div class="sktitle">AI & Machine Learning</div>
-      <div class="sklist">
-        <span class="skrow">PyTorch / Keras</span>
-        <span class="skrow">LLaMA / Gemini APIs</span>
-        <span class="skrow">Diffusers / Stable Diffusion</span>
-        <span class="skrow">Transformers</span>
-        <span class="skrow">NLP & Computer Vision</span>
-      </div>
-    </div>
-    <div class="skblk">
-      <div class="skico"><i data-lucide="globe" aria-hidden="true"></i></div>
-      <div class="sktitle">Web & App Dev</div>
-      <div class="sklist">
-        <span class="skrow">Python / FastAPI</span>
-        <span class="skrow">Java / Android Dev</span>
-        <span class="skrow">React.js / Next.js</span>
-        <span class="skrow">Node.js / Express</span>
-        <span class="skrow">MongoDB / SQL</span>
-      </div>
-    </div>
-    <div class="skblk">
-      <div class="skico"><i data-lucide="wrench" aria-hidden="true"></i></div>
-      <div class="sktitle">Tools & DevOps</div>
-      <div class="sklist">
-        <span class="skrow">Git / Bash / Linux</span>
-        <span class="skrow">Docker</span>
-        <span class="skrow">Google Cloud (GCP)</span>
-        <span class="skrow">CI/CD Pipelines</span>
-        <span class="skrow">Postman / Playwright</span>
-      </div>
-    </div>
-  </div>
-</section>
+  <div class="duel-section" style="min-height: auto;"><div class="section-spacer"></div></div>
 
-<!-- EDUCATION -->
-<section class="sec">
-  <div class="sec-head r"><span class="sec-eye">Education</span></div>
-  <div class="edu-timeline">
-    <div class="edu-item r">
-      <span class="edu-dot" aria-hidden="true"></span>
-      <article class="edu-card">
-        <div class="edu-header">
-          <span class="edu-inst">International Institute of Information Technology, Hyderabad</span>
-          <span class="edu-years">2024 – 2028</span>
-        </div>
-        <div class="edu-degree">B.Tech in Computer Science & Engineering</div>
-        <div class="edu-board">Current CGPA: 8.86 · Undergraduate Researcher at CVIT Lab</div>
-      </article>
+  <!-- BEYOND CODE -->
+  <section id="beyond-code" class="staggered-section">
+    <div class="section-heading-wrapper slide-in-left">
+      <h2 class="section-heading">Beyond Code</h2>
     </div>
-    <div class="edu-item r d1">
-      <span class="edu-dot" aria-hidden="true"></span>
-      <article class="edu-card">
-        <div class="edu-header">
-          <span class="edu-inst">Techno India Group Public School, Cooch Behar</span>
-          <span class="edu-years">2014 – 2024</span>
-        </div>
-        <div class="edu-degree">CBSE Board · Science Stream</div>
-        <div class="edu-board">Class 10: 97% · Class 12: 96.4%</div>
-      </article>
-    </div>
-  </div>
-</section>
 
-<!-- ABOUT -->
-<section class="sec" id="about">
-  <div class="sec-head r"><span class="sec-eye">About</span></div>
-  <div class="abgrid">
-    <div class="r">
-      <p class="abhl">
-        I'm a <strong>third-year CSE student at IIIT Hyderabad</strong> and an <strong>undergraduate researcher in the CVIT Lab</strong>. Born in Cooch Behar, West Bengal, I was always interested in technology as well as Music.
-        <br><br>
-        My interests revolve around making <em>intelligent and efficient systems</em>.  I'm equally passionate about music—been playing MIDI keyboards and experimenting with sound synthesis. I also love to sketch and paint in my free time.
-        <br><br>
-       
-      </p>
+    <!-- Gaming -->
+    <div class="side-a slide-in-left stagger-item" style="display: flex; justify-content: center; align-items: center;">
+      <i data-lucide="gamepad-2" style="width: 12vw; height: 12vw; stroke-width: 1.5; color: var(--accent);"></i>
     </div>
-    <div class="r d1" id="contact-card">
-      <div class="inrow"><span class="inlbl">Email</span><span class="inval"><a href="mailto:royrimo2006@gmail.com">royrimo2006@gmail.com</a></span></div>
-      <div class="inrow"><span class="inlbl">GitHub</span><span class="inval"><a href="https://github.com/Kausheya2006" style="color:var(--accent)">github.com/Kausheya2006</a></span></div>
-      <div class="inrow"><span class="inlbl">Location</span><span class="inval">Hyderabad, India</span></div>
-      <div class="inrow"><span class="inlbl">Research</span><span class="inval">CVIT, IIIT-H</span></div>
+    <div class="side-b slide-in-right stagger-item offset-right">
+      <h3 class="desc-title">Gaming</h3>
+      <p class="desc-body" style="font-size: 24px;">Strategic and immersive gameplay.</p>
     </div>
-  </div>
-</section>
 
-<!-- CTA -->
-<footer>
-  <div class="cta-sec">
-    <div class="cta-inner">
-      <h2 class="cta-h r">Let's build<br><em>something together.</em></h2>
-      <div class="cta-r r d1">
-        <form class="contact-form" id="contact-form">
-          <input type="text" id="contact-message" placeholder="Start a conversation..." required class="contact-input">
-          <button type="submit" class="contact-submit" aria-label="Send Message">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </button>
-        </form>
-        <div class="cta-links">
-          <a href="https://github.com/Kausheya2006" class="cta-lnk">GitHub ↗</a>
-          <a href="https://linkedin.com/in/kausheya-roy-688618310/" class="cta-lnk">LinkedIn ↗</a>
-        </div>
-      </div>
+    <!-- Painting -->
+    <div class="side-a slide-in-left stagger-item offset-left" style="text-align: right;">
+      <h3 class="desc-title">Painting &<br>Sketching</h3>
+      <p class="desc-body" style="font-size: 24px;">Visual arts and creative expression.</p>
     </div>
-    <div class="footbar"><span>© 2026 Kausheya Roy</span></div>
-  </div>
-</footer>
+    <div class="side-b slide-in-right stagger-item" style="display: flex; justify-content: center; align-items: center;">
+      <i data-lucide="palette" style="width: 12vw; height: 12vw; stroke-width: 1.5; color: var(--accent);"></i>
+    </div>
 
-<div id="dynamic-scroll" class="dynamic-scroll">
-  <span id="ds-icon-container"><i data-lucide="arrow-down" style="width: 24px; height: 24px;"></i></span>
-</div>
+    <!-- Music -->
+    <div class="side-a slide-in-left stagger-item" style="display: flex; justify-content: center; align-items: center;">
+      <i data-lucide="music-4" style="width: 12vw; height: 12vw; stroke-width: 1.5; color: var(--accent);"></i>
+    </div>
+    <div class="side-b slide-in-right stagger-item offset-right">
+      <h3 class="desc-title">MIDI<br>Keyboards</h3>
+      <p class="desc-body" style="font-size: 24px;">Experimenting with sound synthesis and music production.</p>
+    </div>
+  </section>
 
-<script src="index.js"></script>
+  <div class="duel-section" style="min-height: auto;"><div class="section-spacer"></div></div>
+
+  <!-- ACHIEVEMENTS -->
+  <section id="achievements" class="staggered-section">
+    <div class="section-heading-wrapper slide-in-left">
+      <h2 class="section-heading">Achievements</h2>
+    </div>
+
+    <!-- Hackathons -->
+    <div class="side-a slide-in-left stagger-item" style="display: flex; align-items: center;">
+      <h3 class="desc-title">Hackathons &<br>Recognition</h3>
+    </div>
+    <div class="side-b slide-in-right stagger-item offset-right">
+      <ul class="ach-list" style="list-style: none; padding: 0;">
+        <li>Selected among top 6 of 24 teams and invited to Qualcomm office to exhibit the AI-Powered Tutor project.</li>
+        <li>Finalist, Felicity Hackathon 2025, IIIT Hyderabad (Virtual Labs).</li>
+        <li>Third Place in DataBlitz Opencode 2025 Hackathon, organized by IIIT Allahabad.</li>
+      </ul>
+    </div>
+
+    <!-- Scores & Metrics -->
+    <div class="side-a slide-in-left stagger-item offset-left">
+      <ul class="ach-list ach-list-right" style="list-style: none; padding: 0; text-align: right;">
+        <li>Codeforces: Max rating 1451 (Specialist).</li>
+        <li>JEE Main 2024: AIR 902 (99.97 percentile) among 1,415,110 candidates.</li>
+        <li>JEE Advanced 2024: AIR 2303 among 186,584 candidates.</li>
+        <li>WBJEE 2024: AIR 23 among 142,694 candidates.</li>
+        <li>ISI Admission Test: AIR 63 among ~50,000 candidates.</li>
+      </ul>
+    </div>
+    <div class="side-b slide-in-right stagger-item" style="display: flex; align-items: center;">
+      <h3 class="desc-title">Scores &<br>Metrics</h3>
+    </div>
+  </section>
+
+  <div class="duel-section" style="min-height: auto;"><div class="section-spacer"></div></div>
+
+  <!-- CTA -->
+  <section id="contact" class="cta-section">
+    <div class="section-heading-wrapper slide-in-left">
+      <h2 class="section-heading" style="text-align: center; margin: 0 auto;">Get In Touch</h2>
+    </div>
+    <div class="side-a slide-in-left" style="text-align: center; border-top: 1px solid #ddd; padding-top: 64px;">
+      <p class="desc-body" style="font-size: 24px;">Always open for a conversation.</p>
+      <p class="cta-a" style="text-transform: lowercase; margin-bottom: 0;">royrimo2006@gmail.com</p>
+    </div>
+    <div class="side-b slide-in-right" style="text-align: center; border-top: 1px solid #222; padding-top: 64px;">
+      <a href="https://github.com/Kausheya2006" class="cta-b" style="display: block; margin-bottom: 24px;">GitHub Profile</a>
+      <a href="https://linkedin.com/in/kausheya-roy-688618310/" class="cta-b" style="display: block; margin-bottom: 24px;">LinkedIn Profile</a>
+      <p class="desc-body" style="color: #666;">Location: Hyderabad, India</p>
+    </div>
+  </section>
+
+  <script src="index.js"></script>
 </body>
 </html>
