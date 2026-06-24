@@ -260,10 +260,55 @@ body {
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 0.1em;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 2px;
 }
 
-.desc-link:hover { text-decoration: underline; }
+.desc-link::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--accent);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease-out;
+}
 
+.desc-link:hover { text-decoration: none; }
+
+.desc-link:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.inline-hover-link {
+  color: inherit;
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+}
+
+.inline-hover-link::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--accent);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease-out;
+}
+
+.inline-hover-link:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
 .tech-edu-section {
   display: grid;
   grid-template-columns: 50vw 50vw;
