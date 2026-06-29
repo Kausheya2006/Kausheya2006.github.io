@@ -53,7 +53,7 @@
     </div>
     <div class="side-b slide-in-right stagger-item offset-right">
       <h3 class="desc-title">ProductLabs AI Form Filler</h3>
-      <p class="desc-body">Developed a real-time information extraction pipeline using FastAPI and a Qwen-2.5-1.5B model to parse and populate structured form schemas directly from live chat inputs. Engineered a multimodal media layer using Whisper ASR and PyAnnote acoustic embeddings to automate speaker diarization, keeping streaming chunk ingestion latency under 200 ms. Implemented a custom worker thread pool to manage concurrent live audio workflows, reducing peak response latency by 65%.</p>
+      <p class="desc-body">Developed a real-time information extraction pipeline using Qwen-2.5-1.5B model to parse and populate structured form schemas directly from live text/audio chat inputs. Also implemented a multimodal media layer using Whisper ASR and PyAnnote acoustic embeddings to automate speaker diarization, keeping streaming chunk ingestion latency under 200 ms. Also designed a custom worker thread pool to manage concurrent live audio workflows, and model inferencing, reducing peak response latency by 65%.</p>
       <div class="desc-metrics">
         <span><strong style="color:var(--accent);">< 200 ms</strong> Chunks</span>
         <span><strong style="color:var(--accent);">65%</strong> Latency Drop</span>
@@ -67,7 +67,7 @@
     <!-- Project 2: AI Tutor -->
     <div class="side-a slide-in-left stagger-item offset-left">
       <h3 class="desc-title" style="text-align: right;">AI-Powered Tutor</h3>
-      <p class="desc-body" style="text-align: right;">Built an offline personalized AI tutoring app on the Qualcomm Innovators Dev Kit, running LLaMA-3.2-3B fully on-device via QAIRT. Optimized NPU inference to scale throughput from around 3 to 26-30 tokens/s while cutting TTFT to 25 ms. Implemented Android-side PDF parsing and prompt orchestration for quizzes, flashcards, summaries, and key-topic extraction without internet.</p>
+      <p class="desc-body" style="text-align: right;">Built an offline personalized AI tutoring app on the Qualcomm Innovators Dev Kit, running LLaMA-3.2-3B fully on-device via QAIRT. Optimized NPU inference to scale throughput from around 3 to 26-30 tokens/s while cutting TTFT to 25 ms. Implemented Android-side PDF parsing and prompt orchestration for quizzes, flashcards, summaries, weak-topics review and key-topic extraction without internet.</p>
       <div class="desc-metrics" style="justify-content: flex-end;">
         <span><strong style="color:var(--accent);">26-30 tok/s</strong> throughput</span>
         <span><strong style="color:var(--accent);">25 ms</strong> TTFT</span>
@@ -103,9 +103,9 @@
     <!-- Project 4: Cricket Timeline -->
     <div class="side-a slide-in-left stagger-item offset-left">
       <h3 class="desc-title" style="text-align: right;">Cricket Match<br>Timeline Generator</h3>
-      <p class="desc-body" style="text-align: right;">CV and OCR pipeline that parses raw cricket videos into ball-by-ball text timelines. Trained two custom ResNet18 models to track bowler action and predict exact ball-release timestamps. Paired PaddleOCR with a custom state machine to read the broadcast scoreboard at those specific frames and infer missing data. Built an interactive CLI tool with smart caching to avoid running heavy GPU inferences twice.</p>
+      <p class="desc-body" style="text-align: right;">End-to-end CV and OCR pipeline that parses raw cricket videos into ball-by-ball text timelines. Trained two custom ResNet18 models to track bowler action and predict exact ball-release timestamps. Paired PaddleOCR with a custom state machine to read the broadcast scoreboard at those specific frames and infer missing data. Built an interactive CLI tool with smart caching to avoid running heavy GPU inferences twice.</p>
       <div class="desc-metrics" style="justify-content: flex-end;">
-        <span><strong style="color:var(--accent);">2 Custom</strong> ResNet18 Models</span>
+        <span><strong style="color:var(--accent);">Custom</strong> ResNet18 Models</span>
         <span><strong style="color:var(--accent);">PaddleOCR</strong> Integration</span>
       </div>
       <div class="desc-stack" style="justify-content: flex-end;">
@@ -131,7 +131,7 @@
         <span><strong style="color:var(--accent);">MIDI</strong> & preset system</span>
       </div>
       <div class="desc-stack">
-        <span>Python</span><span>FluidSynth</span><span>MIDI</span>
+        <span>Python</span><span>FluidSynth</span><span>SoundFont</span></span><span>MIDI</span>
       </div>
       <a href="https://github.com/Kausheya2006/AmbientSynth" class="desc-link">View on GitHub ↗</a>
     </div>
@@ -139,13 +139,13 @@
     <!-- Project 6: CLI-Shark -->
     <div class="side-a slide-in-left stagger-item offset-left">
       <h3 class="desc-title" style="text-align: right;">CLI-Shark</h3>
-      <p class="desc-body" style="text-align: right;">Built a packet sniffer in C with libpcap to capture and analyze live traffic directly from network interfaces. Integrated kernel-level BPF filtering to reduce CPU load by around 60 percent. Designed a CLI that parses Ethernet, IP, and TCP/UDP headers and streams packet summaries in real time for debugging workflows.</p>
+      <p class="desc-body" style="text-align: right;">Built a packet sniffer in C with libpcap to capture and analyze live traffic directly from network interfaces. Integrated kernel-level BPF filtering to reduce CPU load by around 60 percent. Designed a CLI that parses Ethernet, IP, and TCP/UDP headers and streams packet summaries in real time for debugging workflows. Also added optional AI insights (using Ollama LLaMA-3) for captured packets and RST Sniper to neutralize TCP Connections. </p>
       <div class="desc-metrics" style="justify-content: flex-end;">
         <span><strong style="color:var(--accent);">~60%</strong> lower CPU load</span>
         <span><strong style="color:var(--accent);">Real-time</strong> header parsing</span>
       </div>
       <div class="desc-stack" style="justify-content: flex-end;">
-        <span>C</span><span>libpcap</span><span>POSIX Networking</span><span>TCP/IP Stack</span><span>BPF</span>
+        <span>C</span><span>libpcap</span><span>POSIX Networking</span><span>TCP/IP Stack</span><span>BPF</span><span>Ollama</span>
       </div>
       <div style="text-align: right;"><a href="https://github.com/Kausheya2006/CLI-Shark" class="desc-link">View on GitHub ↗</a></div>
     </div>
@@ -180,7 +180,7 @@
   <section class="choice-moment slide-in-right">
     <div class="choice-noise"></div>
     <h2 style="font-size: clamp(32px, 5vw, 64px); text-transform: none; font-style: italic;">Driven by logic. Shaped by sound.</h2>
-    <p style="max-width: 800px; margin: 0 auto; line-height: 1.8;">Born in Cooch Behar, West Bengal, my journey into technology is fueled by a desire to build systems that create meaningful, positive impact. Beyond coding, I am also deeply passionate about music, spending my time playing the MIDI keyboard and experimenting with sound synthesis.</p>
+    <p style="max-width: 800px; margin: 0 auto; line-height: 1.8;">Born in Cooch Behar, West Bengal, my journey into technology is fueled by a desire to build systems that create meaningful, positive impact to the society. Beyond coding, I am also deeply passionate about music, spending my time playing the MIDI keyboard and experimenting with sound synthesis.</p>
   </section>
   <div class="duel-section" style="min-height: auto;"><div class="section-spacer"></div></div>
 
@@ -229,15 +229,14 @@
     
     <!-- Systems -->
     <div class="side-a slide-in-left stagger-item" style="display: flex; align-items: center;">
-      <h3 class="desc-title">Systems &<br>Low-Level</h3>
+      <h3 class="desc-title">Programming Languages</h3>
     </div>
     <div class="side-b slide-in-right stagger-item offset-right">
       <ul class="ach-list" style="list-style: none; padding: 0;">
         <li>C / C++</li>
-        <li>x86 Assembly</li>
-        <li>POSIX Threads</li>
-        <li>TCP/IP Stack</li>
-        <li>BPF / libpcap</li>
+        <li>Java</li>
+        <li>Python</li>
+        <li>JavaScript</li>
       </ul>
     </div>
 
@@ -255,19 +254,42 @@
       <h3 class="desc-title">AI & Machine<br>Learning</h3>
     </div>
 
-    <!-- Web & App -->
+    <!-- Web Dev -->
     <div class="side-a slide-in-left stagger-item" style="display: flex; align-items: center;">
-      <h3 class="desc-title">Web &<br>App Dev</h3>
+      <h3 class="desc-title">Backend / <br>Frameworks</h3>
     </div>
     <div class="side-b slide-in-right stagger-item offset-right">
       <ul class="ach-list" style="list-style: none; padding: 0;">
-        <li>Python / FastAPI</li>
-        <li>Java / Android Dev</li>
-        <li>React.js / Next.js</li>
+        <li>FastAPI</li>
         <li>Node.js / Express</li>
-        <li>MongoDB / SQL</li>
+        <li>MongoDB / MySQL</li>
       </ul>
     </div>
+
+    <div class="side-a slide-in-left stagger-item offset-left">
+      <ul class="ach-list ach-list-right" style="list-style: none; padding: 0; text-align: right;">
+        <li>HTML / CSS (Tailwind CSS)</li>
+        <li>React.js</li>
+        <li>Next.js</li>
+      </ul>
+    </div>
+    <div class="side-b slide-in-right stagger-item" style="display: flex; align-items: center;">
+      <h3 class="desc-title">Frontend /<br>Web</h3>
+    </div>
+
+    <!-- Tools & DevOps -->
+    <div class="side-a slide-in-left stagger-item" style="display: flex; align-items: center;">
+      <h3 class="desc-title">Tools &<br>DevOps</h3>
+    </div>
+    <div class="side-b slide-in-right stagger-item offset-right">
+      <ul class="ach-list" style="list-style: none; padding: 0;">
+        <li>Bash</li>
+        <li>Git</li>
+        <li>Docker</li>
+        <li>Google Cloud Platform (GCP)</li>
+      </ul>
+    </div>
+
   </section>
 
   <div class="duel-section" style="min-height: auto;"><div class="section-spacer"></div></div>
@@ -278,24 +300,6 @@
       <h2 class="section-heading">Beyond Code</h2>
     </div>
 
-    <!-- Gaming -->
-    <div class="side-a slide-in-left stagger-item" style="display: flex; justify-content: center; align-items: center;">
-      <i data-lucide="gamepad-2" style="width: 12vw; height: 12vw; stroke-width: 1.5; color: var(--accent);"></i>
-    </div>
-    <div class="side-b slide-in-right stagger-item offset-right">
-      <h3 class="desc-title">Gaming</h3>
-      <p class="desc-body" style="font-size: 24px;">Strategic and immersive gameplay.</p>
-    </div>
-
-    <!-- Painting -->
-    <div class="side-a slide-in-left stagger-item offset-left" style="text-align: right;">
-      <h3 class="desc-title">Painting &<br>Sketching</h3>
-      <p class="desc-body" style="font-size: 24px;">Visual arts and creative expression.</p>
-    </div>
-    <div class="side-b slide-in-right stagger-item" style="display: flex; justify-content: center; align-items: center;">
-      <i data-lucide="palette" style="width: 12vw; height: 12vw; stroke-width: 1.5; color: var(--accent);"></i>
-    </div>
-
     <!-- Music -->
     <div class="side-a slide-in-left stagger-item" style="display: flex; justify-content: center; align-items: center;">
       <i data-lucide="music-4" style="width: 12vw; height: 12vw; stroke-width: 1.5; color: var(--accent);"></i>
@@ -304,7 +308,28 @@
       <h3 class="desc-title">MIDI<br>Keyboards</h3>
       <p class="desc-body" style="font-size: 24px;">Experimenting with sound synthesis and music production.</p>
     </div>
+
+    <!-- Gaming -->
+    <div class="side-a slide-in-left stagger-item offset-left" style="text-align: right;">
+      <h3 class="desc-title">Gaming</h3>
+      <p class="desc-body" style="font-size: 24px;">Enjoys fast-paced action and tactical combat games.</p>
+    </div>
+    <div class="side-b slide-in-right stagger-item" style="display: flex; justify-content: center; align-items: center;">
+      <i data-lucide="gamepad-2" style="width: 12vw; height: 12vw; stroke-width: 1.5; color: var(--accent);"></i>
+    </div>
+
+    <!-- Painting -->
+    <div class="side-a slide-in-left stagger-item" style="display: flex; justify-content: center; align-items: center;">
+      <i data-lucide="palette" style="width: 12vw; height: 12vw; stroke-width: 1.5; color: var(--accent);"></i>
+    </div>
+    <div class="side-b slide-in-right stagger-item offset-right" style="text-align: left;">
+      <h3 class="desc-title">Painting &<br>Sketching</h3>
+      <p class="desc-body" style="font-size: 24px;">Love to do pencil sketch. </p>
+    </div>
+
   </section>
+
+    
 
   <div class="duel-section" style="min-height: auto;"><div class="section-spacer"></div></div>
 
